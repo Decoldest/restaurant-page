@@ -9,12 +9,12 @@ import './style.css'
 
 const content = document.getElementById('content');
 
-const loadMain = () => {
+const loadHome = () => {
   const container = document.createElement('container');
-  container.classList.add('main');
+  container.classList.add('home');
 
-  const mainSection = document.createElement('section');
-  mainSection.innerHTML = `<img src="${Gif}" alt="Restaurant">`;
+  const homeSection = document.createElement('section');
+  homeSection.innerHTML = `<img src="${Gif}" alt="Restaurant">`;
   
   const textSection =  document.createElement('section');
   textSection.innerHTML = `
@@ -25,11 +25,11 @@ const loadMain = () => {
   const foodSection = document.createElement('section');
   foodSection.innerHTML = `<img src="${Menu}" alt="Menu">`;
   
-  container.append(mainSection, textSection, foodSection);
+  container.append(homeSection, textSection, foodSection);
   content.appendChild(container);
 }
 
-loadMain();
+loadHome();
 
 const navButtons = Array.from(document.querySelectorAll('button'));
 addNavButtonListeners(navButtons);
@@ -50,8 +50,8 @@ function addNavButtonListeners(navButtons) {
         case "Locations":
           buttonFunction = loadLocations;
           break;
-        case "Main":
-          buttonFunction = loadMain;
+        case "Home":
+          buttonFunction = loadHome;
           break;
         default:
           //load Homepage
