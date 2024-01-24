@@ -21,7 +21,8 @@ const loadMenu = () => {
     const imgElement = new Image();
     imgElement.src = item.src;
     imgElement.alt = item.alt;
-    menuDisplay.appendChild(imgElement);
+    let imageContainer = document.createElement('div').appendChild(imgElement);
+    menuDisplay.appendChild(imageContainer);
   });
     menuDisplay.classList.add('menu');
     
