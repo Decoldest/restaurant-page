@@ -32,6 +32,7 @@ function addNavButtonListeners(navButtons) {
     button.addEventListener('click', () => {
       content.innerHTML = "";
       let buttonFunction;
+      
       switch (button.id) {
         case "Menu":
           buttonFunction = loadMenu;
