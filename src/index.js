@@ -2,6 +2,9 @@ import Gif from './Restaurant.gif';
 import Menu from './Menu.png';
 
 import loadMenu from './menu.js';
+import loadReservations from './reservations.js';
+import loadLocations from './locations.js';
+
 
 const content = document.getElementById('content');
 
@@ -21,3 +24,28 @@ content.appendChild(restaurantImageSection);
 content.appendChild(restaurantTextSection);
 content.appendChild(restaurantMenuSection);
 
+const navButtons = Array.from(document.querySelectorAll('button'));
+addNavButtonListeners(navButtons);
+
+function addNavButtonListeners(navButtons) {
+  for (let button of navButtons) {
+    button.addEventListener('click', () => {
+      content.innerHTML = "";
+      let buttonFunction;
+      switch (button.id) {
+        case "Menu":
+          buttonFunction = loadMenu;
+          break;
+        case "Reservations":
+          buttonFunction = loadReservations;
+          break;
+        case "Locations":
+          buttonFunction = loadLocations;
+          break;
+        default:
+          //load Homepage
+      }
+      content.appendChild(buttonFunction());
+    });
+  }
+}

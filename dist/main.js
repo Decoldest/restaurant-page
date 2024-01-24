@@ -16,7 +16,17 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Restaurant_gif__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Restaurant.gif */ \"./src/Restaurant.gif\");\n/* harmony import */ var _Menu_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Menu.png */ \"./src/Menu.png\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n\n\n\n\n\nconst content = document.getElementById('content');\n\nconst restaurantImageSection = document.createElement('section');\nrestaurantImageSection.innerHTML = `<img src=\"${_Restaurant_gif__WEBPACK_IMPORTED_MODULE_0__}\" alt=\"Restaurant\">`;\n\nconst restaurantTextSection =  document.createElement('section');\nrestaurantTextSection.innerHTML = `\n  <h2>Taste of Ba Sing Se</h2>\n  <p>Flavours from all four nations.</p>\n`;\n\nconst restaurantMenuSection = document.createElement('section');\nrestaurantMenuSection.innerHTML = `<img src=\"${_Menu_png__WEBPACK_IMPORTED_MODULE_1__}\" alt=\"Menu\">`;\n\ncontent.appendChild(restaurantImageSection);\ncontent.appendChild(restaurantTextSection);\ncontent.appendChild(restaurantMenuSection);\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Restaurant_gif__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Restaurant.gif */ \"./src/Restaurant.gif\");\n/* harmony import */ var _Menu_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Menu.png */ \"./src/Menu.png\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n/* harmony import */ var _reservations_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./reservations.js */ \"./src/reservations.js\");\n/* harmony import */ var _locations_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./locations.js */ \"./src/locations.js\");\n\n\n\n\n\n\n\n\nconst content = document.getElementById('content');\n\nconst restaurantImageSection = document.createElement('section');\nrestaurantImageSection.innerHTML = `<img src=\"${_Restaurant_gif__WEBPACK_IMPORTED_MODULE_0__}\" alt=\"Restaurant\">`;\n\nconst restaurantTextSection =  document.createElement('section');\nrestaurantTextSection.innerHTML = `\n  <h2>Taste of Ba Sing Se</h2>\n  <p>Flavours from all four nations.</p>\n`;\n\nconst restaurantMenuSection = document.createElement('section');\nrestaurantMenuSection.innerHTML = `<img src=\"${_Menu_png__WEBPACK_IMPORTED_MODULE_1__}\" alt=\"Menu\">`;\n\ncontent.appendChild(restaurantImageSection);\ncontent.appendChild(restaurantTextSection);\ncontent.appendChild(restaurantMenuSection);\n\nconst navButtons = Array.from(document.querySelectorAll('button'));\naddNavButtonListeners(navButtons);\n\nfunction addNavButtonListeners(navButtons) {\n  for (let button of navButtons) {\n    button.addEventListener('click', () => {\n      content.innerHTML = \"\";\n      let buttonFunction;\n      switch (button.id) {\n        case \"Menu\":\n          buttonFunction = _menu_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"];\n          break;\n        case \"Reservations\":\n          buttonFunction = _reservations_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"];\n          break;\n        case \"Locations\":\n          buttonFunction = _locations_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"];\n          break;\n        default:\n          //load Homepage\n      }\n      content.appendChild(buttonFunction());\n    });\n  }\n}\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/locations.js":
+/*!**************************!*\
+  !*** ./src/locations.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\n\nconst loadLocations = () => {\n  console.log(\"locations\");\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadLocations);\n\n//# sourceURL=webpack://restaurant-page/./src/locations.js?");
 
 /***/ }),
 
@@ -26,7 +36,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Res
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _Cabbages_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Cabbages.png */ \"./src/Cabbages.png\");\n/* harmony import */ var _Iroh_Tea_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Iroh-Tea.png */ \"./src/Iroh-Tea.png\");\nObject(function webpackMissingModule() { var e = new Error(\"Cannot find module './Sea-Prunes.png'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n/* harmony import */ var _Cactus_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Cactus.png */ \"./src/Cactus.png\");\n\n\n\n\n\nconst loadMenu = () => {\n  const menuDisplay = document.createElement('div');\n  menuDisplay.innerHTML = \n    `<img src=\"${_Cabbages_png__WEBPACK_IMPORTED_MODULE_0__}\" alt=\"Cabbages\">\n    <img src=\"${_Iroh_Tea_png__WEBPACK_IMPORTED_MODULE_1__}\" alt=\"Uncle Iroh's Tea\"\n    <img src=\"${Object(function webpackMissingModule() { var e = new Error(\"Cannot find module './Sea-Prunes.png'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }())}\" alt=\"Water Tribe Sea Prune\">\n    <img src=\"${_Cactus_png__WEBPACK_IMPORTED_MODULE_3__}\" alt=\"Cabbages\"`;\n} \n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadMenu);\n\n//# sourceURL=webpack://restaurant-page/./src/menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _Cabbages_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Cabbages.png */ \"./src/Cabbages.png\");\n/* harmony import */ var _Iroh_Tea_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Iroh-Tea.png */ \"./src/Iroh-Tea.png\");\n/* harmony import */ var _Sea_Prunes_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Sea-Prunes.jpg */ \"./src/Sea-Prunes.jpg\");\n/* harmony import */ var _Cactus_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Cactus.png */ \"./src/Cactus.png\");\n\n\n\n\n\nconst loadMenu = () => {\n  const menuDisplay = document.createElement('div');\n  menuDisplay.innerHTML = \n    `<img src=\"${_Cabbages_png__WEBPACK_IMPORTED_MODULE_0__}\" alt=\"Cabbages\">\n    <img src=\"${_Iroh_Tea_png__WEBPACK_IMPORTED_MODULE_1__}\" alt=\"Uncle Iroh's Tea\">\n    <img src=\"${_Sea_Prunes_jpg__WEBPACK_IMPORTED_MODULE_2__}\" alt=\"Water Tribe Sea Prune\">\n    <img src=\"${_Cactus_png__WEBPACK_IMPORTED_MODULE_3__}\" alt=\"Cabbages\">`;\n\n    return menuDisplay;\n} \n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadMenu);\n\n//# sourceURL=webpack://restaurant-page/./src/menu.js?");
+
+/***/ }),
+
+/***/ "./src/reservations.js":
+/*!*****************************!*\
+  !*** ./src/reservations.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\n\nconst loadReservations = () => {\n  console.log(\"locations\");\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadReservations);\n\n//# sourceURL=webpack://restaurant-page/./src/reservations.js?");
 
 /***/ }),
 
@@ -77,6 +97,16 @@ eval("module.exports = __webpack_require__.p + \"6ea31f8d0a15214a55d4.png\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__.p + \"2ea3b2af2cd79cfb5204.gif\";\n\n//# sourceURL=webpack://restaurant-page/./src/Restaurant.gif?");
+
+/***/ }),
+
+/***/ "./src/Sea-Prunes.jpg":
+/*!****************************!*\
+  !*** ./src/Sea-Prunes.jpg ***!
+  \****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"4ba1fe271682a5b981a5.jpg\";\n\n//# sourceURL=webpack://restaurant-page/./src/Sea-Prunes.jpg?");
 
 /***/ })
 
