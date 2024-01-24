@@ -1,4 +1,4 @@
-
+import Map from './Map.jpeg';
 
 const loadLocations = () => {
   const locationsDisplay = document.createElement('div');
@@ -10,7 +10,8 @@ const loadLocations = () => {
       <li>Earth Kingdom: Ba Sing Se adjacent to Iroh's Jasmine Dragon</li>
       <li>Fire Nation: Ember Island West Side</li>
       <li>Southern Air Temple: Destroyed by Fire Nation</li>
-    </ul>`
+    </ul>
+    <img src="${Map}" alt="Map">`
   return locationsDisplay;
 }
 
