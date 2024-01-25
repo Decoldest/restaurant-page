@@ -8,7 +8,7 @@
   --restaurant-name: black;
   --navbar-colour: rgb(58, 121, 42);
   --background-colour: rgb(240, 240, 192);
-  --title-colour: rgb(236, 236, 87);
+  --title-colour: rgb(192, 187, 29);
   --button-colour: rgb(255, 178, 52);
 }
 
@@ -29,6 +29,11 @@ nav {
 nav img {
   height: 8svh;
   padding: 8svh;
+  transition: transform 0.25s;
+}
+
+nav img:hover {
+  transform: translateY(-2%);
 }
 
 .nav-right {
@@ -72,10 +77,10 @@ nav button:active {
 
 .home h1 {
   position: absolute;
-  top: 30%;
+  top: 35%;
   color: var(--restaurant-name);
   z-index: 2;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: var(--title-colour);
   text-shadow: 0px 0px 5px rgb(7, 7, 7);
 }
@@ -124,6 +129,10 @@ nav button:active {
 .location ul {
   list-style-type: none;
 }
+.location li {
+  padding: 10px 5px;
+}
+
 
 .location img {
   width: 100%;
