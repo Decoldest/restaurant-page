@@ -10,7 +10,7 @@ import './style.css'
 const content = document.getElementById('content');
 
 const loadHome = () => {
-  const container = document.createElement('container');
+  const container = document.createElement('div');
   container.classList.add('home');
 
   const homeSection = document.createElement('section');
@@ -18,8 +18,8 @@ const loadHome = () => {
   
   const textSection =  document.createElement('section');
   textSection.innerHTML = `
-    <h2>Taste of Ba Sing Se</h2>
-    <p>Flavours from all four nations.</p>
+    <h1>Taste of Ba Sing Se</h1>
+    <p>Unock your inner avatar with flavours from all four nations.</p>
   `;
   
   const foodSection = document.createElement('section');
