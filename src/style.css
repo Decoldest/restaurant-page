@@ -1,18 +1,49 @@
+@font-face {
+  font-family: 'Last Airbender';
+  src: url("./Herculanum.woff") format("truetype");
+  font-style: normal;
+}
+
 :root {
   --restaurant-name: black;
-  --navbar-colour: rgb(58, 121, 42)
+  --navbar-colour: rgb(58, 121, 42);
+  --background-colour: rgb(240, 240, 192);
+  --title-colour: rgb(236, 236, 87);
 }
 
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Last Airbender', sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 10svh;
+  align-items: center;
+  background-color: var(--navbar-colour);
+}
+
+nav img {
+  height: 8svh;
+}
+
+.nav-left a {
+  margin-left: 8svh;
+  text-decoration: none;
+  font-family: 'Avatar';
+}
+
+.nav-right {
+  margin-right: 4svh;
 }
 
 .home {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: wheat;
+  background-color: var(--background-colour);
 }
 
 .home > :nth-child(2) {
@@ -26,39 +57,43 @@
 
 .home h1 {
   position: absolute;
-  top: 20%;
+  top: 30%;
   color: var(--restaurant-name);
+  z-index: 2;
+  font-size: 2.5rem;
+  color: var(--title-colour);
+  text-shadow: 0px 0px 5px rgb(7, 7, 7);
 }
 
 .home img {
   width: 100svw;
+  filter: brightness(0.7)
+}
+
+.home p {
+  font-size: 1.2rem;
 }
 
 .menu {
-  width: 100svw;
-  overflow: hidden;
+  padding-top: 5%;
+  height: 140svh;
   display: grid;
   grid: repeat(3, 1fr) / repeat(2, 1fr);
   justify-items: center;
+  background-color: var(--background-colour);
+  gap: 4%;
 }
 
 .menu img {
   width: 30svw;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  height: 8svh;
-  align-items: center;
-  background-color: var(--navbar-colour);
+.reservation {
+  padding: 5% 8%;
+  height: 92svh;
+  background-color: var(--background-colour);
 }
 
-.nav-left a {
-  margin-left: 4svh;
-  text-decoration: none;
-}
-
-.nav-right {
-  margin-right: 4svh;
+.reservation p {
+  padding-top: 2%;
 }

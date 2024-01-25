@@ -1,38 +1,16 @@
-import Gif from './Restaurant.gif';
-import Menu from './Menu.png';
-
 import loadMenu from './menu.js';
 import loadReservations from './reservations.js';
 import loadLocations from './locations.js';
+import loadHome from './home.js';
 
 import './style.css'
 
 const content = document.getElementById('content');
 
-const loadHome = () => {
-  const container = document.createElement('div');
-  container.classList.add('home');
-
-  const homeSection = document.createElement('section');
-  homeSection.innerHTML = `<img src="${Gif}" alt="Restaurant">`;
-  
-  const textSection =  document.createElement('section');
-  textSection.innerHTML = `
-    <h1>Tastes of Ba Sing Se</h1>
-    <p>Unock your inner avatar with flavours from all four nations.</p>
-  `;
-  
-  const foodSection = document.createElement('section');
-  foodSection.innerHTML = `<img src="${Menu}" alt="Menu">`;
-  
-  container.append(homeSection, textSection, foodSection);
-  content.appendChild(container);
-}
-
-loadHome();
-
 const navButtons = Array.from(document.querySelectorAll('button'));
 addNavButtonListeners(navButtons);
+
+content.appendChild(loadHome());
 
 function addNavButtonListeners(navButtons) {
   for (let button of navButtons) {
@@ -54,7 +32,7 @@ function addNavButtonListeners(navButtons) {
           buttonFunction = loadHome;
           break;
         default:
-          //load Homepage
+          buttonFunction = loadHome;
       }
       content.appendChild(buttonFunction());
     });
