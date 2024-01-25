@@ -18,7 +18,7 @@ const loadHome = () => {
   
   const textSection =  document.createElement('section');
   textSection.innerHTML = `
-    <h1>Taste of Ba Sing Se</h1>
+    <h1>Tastes of Ba Sing Se</h1>
     <p>Unock your inner avatar with flavours from all four nations.</p>
   `;
   
