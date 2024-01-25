@@ -17,6 +17,20 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
+      {
+        test: /\.html$/,
+        loader: HtmlBundlerPlugin.loader, // HTML loader
+      },
     ],
   },
+  plugins: [
+    new HtmlBundlerPlugin({
+      js: {
+        filename: 'js/[name].[contenthash:8].js',
+      },
+      css: {
+        filename: 'css/[name].[contenthash:8].css',
+      },
+    }),
+  ],
 };
