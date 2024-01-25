@@ -1,5 +1,5 @@
-import Restaurant from './Restaurant.gif';
-import Menu from './Menu.png';
+import Restaurant from './images/Restaurant.gif';
+import Menu from './images/Menu.png';
 
 const loadHome = () => {
   const container = document.createElement('div');
@@ -15,7 +15,6 @@ const loadHome = () => {
     <p>We combine seasonal ingredients to create our triple White Lotus rated dishes.</p>
   `;
   
-
   const foodSection = document.createElement('section');
   foodSection.innerHTML = `<img src="${Menu}" alt="Menu">`;
   

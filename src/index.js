@@ -5,35 +5,30 @@ import loadHome from './home.js';
 
 import './style.css'
 
+const buttonIds = {
+  Menu: loadMenu,
+  Reservations: loadReservations,
+  Locations: loadLocations,
+  Home: loadHome
+};
+
 const content = document.getElementById('content');
+const emblem = document.getElementById('emblem');
 
 const navButtons = Array.from(document.querySelectorAll('button'));
 addNavButtonListeners(navButtons);
 
 content.appendChild(loadHome());
+emblem.addEventListener('click', () => {
+  content.innerHTML = "";
+  content.appendChild(loadHome());
+});
 
-function addNavButtonListeners(navButtons) {
-  for (let button of navButtons) {
+function addNavButtonListeners(buttons) {
+  for (let button of buttons) {
     button.addEventListener('click', () => {
       content.innerHTML = "";
-      let buttonFunction;
-
-      switch (button.id) {
-        case "Menu":
-          buttonFunction = loadMenu;
-          break;
-        case "Reservations":
-          buttonFunction = loadReservations;
-          break;
-        case "Locations":
-          buttonFunction = loadLocations;
-          break;
-        case "Home":
-          buttonFunction = loadHome;
-          break;
-        default:
-          buttonFunction = loadHome;
-      }
+      const buttonFunction = buttonIds[button.id] || loadHome;
       content.appendChild(buttonFunction());
     });
   }

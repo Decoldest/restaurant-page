@@ -1,9 +1,9 @@
-import Cabbages from './Cabbages.png';
-import Tea from './Iroh-Tea.png';
-import Prunes from './Sea-Prunes.jpg';
-import Cactus from './Cactus.png';
-import Fire from './Fire-Flakes.jpeg';
-import Custard from './Custard.jpeg';
+import Cabbages from './images/Cabbages.png';
+import Tea from './images/Iroh-Tea.png';
+import Prunes from './images/Sea-Prunes.jpg';
+import Cactus from './images/Cactus.png';
+import Fire from './images/Fire-Flakes.jpeg';
+import Custard from './images/Custard.jpeg';
 
 const menuItems = [
   { src: Cabbages, alt: 'Cabbages', description: 'My cabbages.', price: 12 },
@@ -17,8 +17,7 @@ const menuItems = [
 const loadMenu = () => {
   const menuDisplay = document.createElement('div');
 
-  menuItems.forEach(item => {
-    
+  menuItems.forEach(item => { 
     menuDisplay.appendChild(setMenuItem(item));
   });
   menuDisplay.classList.add('menu');
@@ -27,6 +26,7 @@ const loadMenu = () => {
 } 
 
 function setMenuItem (item) {
+
   const imgElement = new Image();
   imgElement.src = item.src;
   imgElement.alt = item.alt;

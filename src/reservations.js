@@ -1,5 +1,3 @@
-
-
 const loadReservations = () => {
   const reservationsDisplay = document.createElement('div');
   reservationsDisplay.innerHTML = 

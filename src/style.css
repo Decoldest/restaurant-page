@@ -9,6 +9,7 @@
   --navbar-colour: rgb(58, 121, 42);
   --background-colour: rgb(240, 240, 192);
   --title-colour: rgb(236, 236, 87);
+  --button-colour: rgb(255, 178, 52);
 }
 
 * {
@@ -27,16 +28,30 @@ nav {
 
 nav img {
   height: 8svh;
-}
-
-.nav-left a {
-  margin-left: 8svh;
-  text-decoration: none;
-  font-family: 'Avatar';
+  padding: 8svh;
 }
 
 .nav-right {
-  margin-right: 4svh;
+  padding-right: 25svh;
+  display: flex;
+  gap: 2%;
+}
+
+nav button {
+  border-style: none;
+  font-size: 1.1rem;
+  color: var(--button-colour);
+  padding: 1% 4%;
+  background-color: transparent;
+  transition: transform 0.2s;
+}
+
+nav button:hover {
+  transform: translateY(-20%);
+}
+
+nav button:active {
+  transform: translateY(10%);
 }
 
 .home {
@@ -75,10 +90,10 @@ nav img {
 }
 
 .menu {
-  padding-top: 5%;
+  padding: 4% 0;
   height: 140svh;
   display: grid;
-  grid: repeat(3, 1fr) / repeat(2, 1fr);
+  grid: repeat(2, 1fr) / repeat(auto-fit, minmax(400px, 1fr));;
   justify-items: center;
   background-color: var(--background-colour);
   gap: 4%;
@@ -89,11 +104,30 @@ nav img {
 }
 
 .reservation {
-  padding: 5% 8%;
+  padding: 4% 8%;
   height: 92svh;
   background-color: var(--background-colour);
 }
 
 .reservation p {
   padding-top: 2%;
+}
+
+.location {
+  background-color: var(--background-colour);
+}
+
+.location div {
+  padding: 4% 8%;
+}
+
+.location ul {
+  list-style-type: none;
+}
+
+.location img {
+  width: 100%;
+}
+.location h3 {
+  padding-bottom: 2%;
 }
